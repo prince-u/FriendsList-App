@@ -140,10 +140,6 @@ body.dark-theme .remove-btn:hover {
     border-left-color: var(--edit-btn-hov-border-col)
 }
 
-body.dark-theme .edit-btn:has(+.remove-btn:hover) {
-    border-right: none
-}
-
 body.dark-theme .edit-btn {
     border-right: none
 }
