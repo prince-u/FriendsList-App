@@ -1,0 +1,24 @@
+{
+  "Friends": [
+    {
+      "name": "how",
+      "id": 1
+    },
+    {
+      "name": "are",
+      "id": 2
+    },
+    {
+      "name": "you",
+      "id": 3
+    },
+    {
+      "name": "doing",
+      "id": 4
+    },
+    {
+      "name": "today",
+      "id": 5
+    }
+  ]
+}

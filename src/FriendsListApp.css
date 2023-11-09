@@ -1,4 +1,6 @@
 /* hov = hover */
+/* rgb(232, 234, 235) */
+/* rgb(27, 63, 86) */
 * {
     margin: 0;
     padding: 0;
@@ -8,8 +10,8 @@
 
 body.dark-theme {
     --dark-blue: rgba(1, 26, 43, 0.9);
-    --blue: rgba(10, 48, 73, 0.93);
-    --white: rgba(255, 255, 255, 0.897);
+    --blue: rgb(27, 63, 86);
+    --white: rgb(232, 234, 235);
 
     --body-bg-col: var(--dark-blue);
     --txt-col: var(--white);
@@ -77,9 +79,19 @@ body {
 h1 {
     margin-bottom: 30px;
     border-bottom: 3px dotted var(--heading-col);
-    display: inline-block;
     padding: 0 2px;
-    color: var(--heading-col)
+    color: var(--heading-col);
+}
+
+.nav {
+    position: absolute;
+    right: 7vw;
+    top: 45px
+}
+
+header>button {
+    position: absolute;
+    margin-left: 100px
 }
 
 ul {
@@ -87,7 +99,6 @@ ul {
 }
 
 ul>li {
-    position: relative;
     border: var(--li-border);
     list-style: none;
     display: flex;
@@ -113,12 +124,12 @@ ul>li {
     flex-basis: 80%;
 }
 
-.edit-input>input {
+.editor>input {
     padding: 8px;
     border: 1px solid rgb(3, 96, 158)
 }
 
-.edit-input>input:focus {
+.editor>input:focus {
     border: none;
     outline: var(--focus-outline)
 }
@@ -181,45 +192,9 @@ body.dark-theme .edit-btn {
     border-right-color: var(--edit-btn-hov-border-col);
 }
 
-.adder {
-    display: flex;
-    align-items: center;
-    margin-top: 30px;
-    width: 100%;
-    margin-bottom: 18px;
-    height: 38px;
-}
-
-.edit-input,
-.adder-input {
-    position: relative;
-    height: 100%;
+.editor>input,
+.adder>input {
     flex-basis: 80%;
-}
-
-body.dark-theme .edit-input::before,
-body.dark-theme ul>li::before,
-body.dark-theme .ok-btn:hover::before,
-body.dark-theme .adder>button:hover::before,
-body.dark-theme .adder-input::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-color: white;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    margin: auto
-}
-
-
-.adder-input>input:focus {
-    outline: var(--focus-outline)
-}
-
-.edit-input>input,
-.adder-input>input {
-    width: 100%;
     padding: 8px;
     border: var(--input-border);
     background-color: var(--input-bg-col);
@@ -245,9 +220,21 @@ body.dark-theme .adder-input::before {
 .adder>button:hover {
     color: var(--txt-col);
     background-color: var(--li-bg-col);
-    border: var(--add-btn-hover-border)
+    border: var(--add-btn-hover-border);
 }
 
+.adder {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    width: 100%;
+    margin-bottom: 18px;
+    height: 38px;
+}
+
+.adder>input:focus {
+    outline: var(--focus-outline)
+}
 
 .divider {
     width: 3px;
@@ -261,4 +248,5 @@ body.dark-theme .adder-input::before {
 .character-counter {
     opacity: 75%;
     font-size: 14px;
+    margin-bottom: 20px;
 }
